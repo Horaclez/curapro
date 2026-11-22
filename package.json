@@ -1,0 +1,37 @@
+{
+  "name": "curapro-cl",
+  "version": "1.0.0",
+  "description": "CuraPro CL - Asistente de Curaci\u00f3n Avanzada",
+  "main": "electron/main.js",
+  "author": "CuraPro CL",
+  "license": "UNLICENSED",
+  "private": true,
+  "scripts": {
+    "vendor": "node scripts/vendor.mjs",
+    "start": "electron .",
+    "build:win": "npm run vendor && electron-builder --win",
+    "cap:sync": "npx cap sync"
+  },
+  "dependencies": {
+    "@capacitor/android": "6.1.2",
+    "@capacitor/cli": "6.1.2",
+    "@capacitor/core": "6.1.2"
+  },
+  "devDependencies": {
+    "electron": "33.2.0",
+    "electron-builder": "25.1.8"
+  },
+  "build": {
+    "appId": "cl.curapro.app",
+    "productName": "CuraPro CL",
+    "files": [
+      "electron/**/*",
+      "www/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": "nsis",
+      "icon": "www/icon-512.png"
+    }
+  }
+}
