@@ -1,7 +1,7 @@
 {
   "name": "curapro-cl",
   "version": "1.0.0",
-  "description": "CuraPro CL - Asistente de Curaci\u00f3n Avanzada",
+  "description": "CuraPro CL - Asistente de Curación Avanzada",
   "main": "electron/main.js",
   "author": "CuraPro CL",
   "license": "UNLICENSED",
@@ -9,7 +9,7 @@
   "scripts": {
     "vendor": "node scripts/vendor.mjs",
     "start": "electron .",
-    "build:win": "npm run vendor && electron-builder --win",
+    "build:win": "npm run vendor && electron-builder --win --publish never",
     "cap:sync": "npx cap sync"
   },
   "dependencies": {
